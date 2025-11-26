@@ -13,7 +13,6 @@
       <a href="#hero">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#footer">Contact</a>
     </div>
   </nav>
 
@@ -34,14 +33,18 @@
   <section id="about" class="section">
     <h2 class="section__title">About</h2>
     <div class="about">
+
+    <div class="about__left">
       <div class="about__photo">
         <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="프로필 사진" />
       </div>
-      <div class="about__content">
-        <div class="about__intro">
-          자세하게 바라보고,<br>
-          오래도록 머무는 디자인을 하는 박지수입니다.
-        </div>
+      <div class="about__intro">
+        자세하게 바라보고,<br>
+        오래도록 머무는 디자인을 하는 박지수입니다.
+      </div>
+    </div>
+    <div class="about__content">
+
         <div class="meta-grid">
           <div class="meta"><strong>이름</strong><span>박지수</span></div>
           <div class="meta"><strong>Birth</strong><span>2004. 05. 10</span></div>
@@ -66,38 +69,17 @@
           <div class="card" style="grid-column: span 2;">
             <h4>Skills</h4>
             <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"></div>
-                <div class="skill-info"><strong>Photoshop</strong><span>이미지 보정 · 합성</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"></div>
-                <div class="skill-info"><strong>Illustrator</strong><span>아이콘 · 로고 제작</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg" alt="Adobe XD"></div>
-                <div class="skill-info"><strong>Adobe XD</strong><span>UX 와이어프레임</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></div>
-                <div class="skill-info"><strong>Figma</strong><span>프로토타입 · 협업</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML"></div>
-                <div class="skill-info"><strong>HTML5</strong><span>접근성 고려 마크업</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS"></div>
-                <div class="skill-info"><strong>CSS3</strong><span>레이아웃 · 모션</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript"></div>
-                <div class="skill-info"><strong>JavaScript</strong><span>인터랙션 구현</span></div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere"></div>
-                <div class="skill-info"><strong>Premiere</strong><span>모션 · 영상 편집</span></div>
-              </div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"><span>Photoshop</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"><span>Illustrator</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg" alt="Adobe XD"><span>Adobe XD</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5"><span>HTML5</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3"><span>CSS3</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript"><span>JavaScript</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro"><span>Premiere Pro</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects"><span>After Effects</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress"><span>WordPress</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender"><span>Blender</span></div>
             </div>
           </div>
         </div>
@@ -109,28 +91,34 @@
     <h2 class="section__title">Project Gallery</h2>
     <div class="gallery-grid">
       <a class="gallery-card" href="project.html?slug=main-banner">
-        <div class="gallery-icon">MB</div>
+
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1522199720771-873d7e08d92d?auto=format&fit=crop&w=900&q=80');"></div>
         <div>
           <h3>메인 배너</h3>
           <p>브랜드 톤앤매너에 맞춘 PC · 모바일 별도 디자인</p>
         </div>
       </a>
       <a class="gallery-card" href="project.html?slug=detail-page">
-        <div class="gallery-icon">DP</div>
+
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80');"></div>
+
         <div>
           <h3>상세페이지</h3>
           <p>상품 USP와 스토리를 강조하는 롱폼 레이아웃</p>
         </div>
       </a>
       <a class="gallery-card" href="project.html?slug=landing-page">
-        <div class="gallery-icon">LP</div>
+
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80');"></div>
+
         <div>
           <h3>렌딩페이지</h3>
           <p>서비스 가치 제안과 CTA에 집중한 전환형 페이지</p>
         </div>
       </a>
       <a class="gallery-card" href="project.html?slug=card-news">
-        <div class="gallery-icon">CN</div>
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');"></div>
+
         <div>
           <h3>카드뉴스</h3>
           <p>SNS 채널용 슬라이드 카드 시리즈 구성</p>

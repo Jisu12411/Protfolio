@@ -1,50 +1,71 @@
-const typedTarget = document.getElementById('typed-text');
-const cursor = document.querySelector('.hero__cursor');
-const nav = document.getElementById('top-nav');
-const hero = document.getElementById('hero');
 
 function runTypingEffect() {
+  const typedTarget = document.getElementById('typed-text');
+  const cursor = document.querySelector('.hero__cursor');
   if (!typedTarget) return;
-  const text = 'PORTFOLIO';
+
+  const text = 'PROTFOLIO';
   let idx = 0;
+  let typingTimer;
+  let blinkTimer;
 
-  function type() {
-    if (idx <= text.length) {
-      typedTarget.textContent = text.slice(0, idx) + '_';
-      idx++;
-    }
-    setTimeout(type, 180);
-  }
+  const step = () => {
+    typedTarget.textContent = text.slice(0, idx);
+    idx = (idx + 1) % (text.length + 1);
+    typingTimer = setTimeout(step, idx === 0 ? 1100 : 150);
+  };
 
-  type();
+  step();
 
   if (cursor) {
-    setInterval(() => {
-      cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-    }, 600);
+    blinkTimer = setInterval(() => {
+      cursor.classList.toggle('is-off');
+    }, 520);
   }
+
+  return () => {
+    clearTimeout(typingTimer);
+    clearInterval(blinkTimer);
+  };
 }
 
-function toggleNav() {
+function initNav() {
+  const nav = document.getElementById('top-nav');
+  const hero = document.getElementById('hero');
   if (!nav) return;
+  
   if (!hero) {
     nav.classList.add('nav--visible');
     return;
   }
 
-  const heroHeight = hero.offsetHeight;
-  if (window.scrollY > heroHeight * 0.4) {
+  if (!('IntersectionObserver' in window)) {
     nav.classList.add('nav--visible');
-  } else {
-    nav.classList.remove('nav--visible');
+    return;
   }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          nav.classList.remove('nav--visible');
+        } else {
+          nav.classList.add('nav--visible');
+        }
+      });
+    },
+    { threshold: 0.4, rootMargin: '-10% 0px -60% 0px' }
+  );
+
+  observer.observe(hero);
 }
 
-function initNav() {
-  if (!nav) return;
-  toggleNav();
-  document.addEventListener('scroll', toggleNav);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    runTypingEffect();
+    initNav();
+  });
+} else {
+  runTypingEffect();
+  initNav();
 }
-
-runTypingEffect();
-initNav();
