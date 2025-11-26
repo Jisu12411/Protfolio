@@ -5,28 +5,27 @@ function runTypingEffect() {
 
   const text = 'PROTFOLIO';
   let idx = 0;
+  let typingTimer;
+  let blinkTimer;
 
-  function type() {
-    if (idx <= text.length) {
-      typedTarget.textContent = text.slice(0, idx);
-      idx += 1;
-      setTimeout(type, 150);
-    } else {
-      setTimeout(() => {
-        idx = 0;
-        typedTarget.textContent = '';
-        type();
-      }, 1100);
-    }
-  }
+  const step = () => {
+    typedTarget.textContent = text.slice(0, idx);
+    idx = (idx + 1) % (text.length + 1);
+    typingTimer = setTimeout(step, idx === 0 ? 1100 : 150);
+  };
 
-  type();
+  step();
 
   if (cursor) {
-    setInterval(() => {
+    blinkTimer = setInterval(() => {
       cursor.classList.toggle('is-off');
     }, 520);
   }
+
+  return () => {
+    clearTimeout(typingTimer);
+    clearInterval(blinkTimer);
+  };
 }
 
 function initNav() {
@@ -35,6 +34,11 @@ function initNav() {
   if (!nav) return;
 
   if (!hero) {
+    nav.classList.add('nav--visible');
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
     nav.classList.add('nav--visible');
     return;
   }
@@ -49,7 +53,7 @@ function initNav() {
         }
       });
     },
-    { threshold: 0.25 }
+    { threshold: 0.4, rootMargin: '-10% 0px -60% 0px' }
   );
 
   observer.observe(hero);
