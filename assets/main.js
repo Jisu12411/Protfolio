@@ -1,23 +1,22 @@
-const typedTarget = document.getElementById('typed-text');
-const cursor = document.querySelector('.hero__cursor');
-const nav = document.getElementById('top-nav');
-const hero = document.getElementById('hero');
-
 function runTypingEffect() {
+  const typedTarget = document.getElementById('typed-text');
+  const cursor = document.querySelector('.hero__cursor');
   if (!typedTarget) return;
+
   const text = 'PROTFOLIO';
   let idx = 0;
 
   function type() {
     if (idx <= text.length) {
-      typedTarget.textContent = text.slice(0, idx) + '_';
+      typedTarget.textContent = text.slice(0, idx);
       idx += 1;
-      setTimeout(type, 160);
+      setTimeout(type, 150);
     } else {
       setTimeout(() => {
         idx = 0;
+        typedTarget.textContent = '';
         type();
-      }, 1200);
+      }, 1100);
     }
   }
 
@@ -25,12 +24,14 @@ function runTypingEffect() {
 
   if (cursor) {
     setInterval(() => {
-      cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-    }, 550);
+      cursor.classList.toggle('is-off');
+    }, 520);
   }
 }
 
 function initNav() {
+  const nav = document.getElementById('top-nav');
+  const hero = document.getElementById('hero');
   if (!nav) return;
 
   if (!hero) {
@@ -48,11 +49,18 @@ function initNav() {
         }
       });
     },
-    { threshold: 0.4 }
+    { threshold: 0.25 }
   );
 
   observer.observe(hero);
 }
 
-runTypingEffect();
-initNav();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    runTypingEffect();
+    initNav();
+  });
+} else {
+  runTypingEffect();
+  initNav();
+}
