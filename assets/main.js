@@ -1,3 +1,4 @@
+
 function runTypingEffect() {
   const typedTarget = document.getElementById('typed-text');
   const cursor = document.querySelector('.hero__cursor');
@@ -32,7 +33,7 @@ function initNav() {
   const nav = document.getElementById('top-nav');
   const hero = document.getElementById('hero');
   if (!nav) return;
-
+  
   if (!hero) {
     nav.classList.add('nav--visible');
     return;
