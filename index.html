@@ -1,1 +1,147 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹디자이너 포트폴리오</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav id="top-nav" class="nav" aria-label="주요 메뉴">
+    <div class="nav__brand"><span class="nav__dot"></span> Portfolio</div>
+    <div class="nav__menu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <div class="hero__label">Creative Web Designer</div>
+      <div class="hero__title" aria-label="포트폴리오 타이핑 영역">
+        <span id="typed-text"></span>
+        <span class="hero__cursor">|</span>
+      </div>
+      <p class="hero__desc">
+        사용자 경험을 우선으로 생각하는 웹디자이너 박지수입니다. 브랜드의 목소리를 담아내는 섬세한 비주얼과 탄탄한 구조로, 제품과 서비스를 돋보이게 만드는 작업을 진행합니다.
+      </p>
+    </div>
+    <div class="scroll-indicator"><span>SCROLL</span></div>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="section__title">About</h2>
+    <div class="about">
+    <div class="about__left">
+      <div class="about__photo">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="프로필 사진" />
+      </div>
+      <div class="about__intro">
+        자세하게 바라보고,<br>
+        오래도록 머무는 디자인을 하는 박지수입니다.
+      </div>
+    </div>
+    <div class="about__content">
+        <div class="meta-grid">
+          <div class="meta"><strong>이름</strong><span>박지수</span></div>
+          <div class="meta"><strong>Birth</strong><span>2004. 05. 10</span></div>
+          <div class="meta"><strong>전화</strong><span>010. 4924. 9326</span></div>
+          <div class="meta"><strong>메일</strong><span>parkjsu05@naver.com</span></div>
+        </div>
+        <div class="subsection">
+          <div class="card">
+            <h4>Education</h4>
+            <ul class="list">
+              <li>2022.03 - 2022.12 스텝스 컴퓨터 학원 과정 수료</li>
+              <li>2022.07 - 2023.02 국비지원 DICA 컴퓨터 학원 과정 수료</li>
+              <li>2022.03 - 2025.07 한국 계명대 재학 중</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Work Experience</h4>
+            <ul class="list">
+              <li>2023.06 - 2024.09 주식 디자인 담당</li>
+            </ul>
+          </div>
+          <div class="card" style="grid-column: span 2;">
+            <h4>Skills</h4>
+            <div class="skills-grid">
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"><span>Photoshop</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"><span>Illustrator</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg" alt="Adobe XD"><span>Adobe XD</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5"><span>HTML5</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3"><span>CSS3</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript"><span>JavaScript</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro"><span>Premiere Pro</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects"><span>After Effects</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress"><span>WordPress</span></div>
+              <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender"><span>Blender</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section--muted">
+    <h2 class="section__title">Project Gallery</h2>
+    <div class="gallery-grid">
+      <a class="gallery-card" href="project.html?slug=main-banner">
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1522199720771-873d7e08d92d?auto=format&fit=crop&w=900&q=80');"></div>
+        <div>
+          <h3>메인 배너</h3>
+          <p>브랜드 톤앤매너에 맞춘 PC · 모바일 별도 디자인</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="project.html?slug=detail-page">
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80');"></div>
+        <div>
+          <h3>상세페이지</h3>
+          <p>상품 USP와 스토리를 강조하는 롱폼 레이아웃</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="project.html?slug=landing-page">
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80');"></div>
+        <div>
+          <h3>렌딩페이지</h3>
+          <p>서비스 가치 제안과 CTA에 집중한 전환형 페이지</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="project.html?slug=card-news">
+        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');"></div>
+        <div>
+          <h3>카드뉴스</h3>
+          <p>SNS 채널용 슬라이드 카드 시리즈 구성</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer">
+    <div>
+      <div class="footer__brand">Jisu Park Portfolio</div>
+      <p class="footer__desc">따뜻한 브라운 톤으로 담아낸 웹디자이너 포트폴리오. 경험과 감각으로 브랜드의 이야기를 시각화합니다.</p>
+    </div>
+    <div>
+      <div class="footer__title">Contact</div>
+      <ul class="footer__list">
+        <li>Phone: 010.4924.9326</li>
+        <li>Email: parkjsu05@naver.com</li>
+        <li>Location: Daegu, Republic of Korea</li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__title">Links</div>
+      <ul class="footer__list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/main.js"></script>
+</body>
+</html>
