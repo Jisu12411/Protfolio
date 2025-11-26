@@ -9,6 +9,10 @@ export const PROJECT_DATA = [
       {
         title: 'PC 버전',
         desc: '대형 비주얼과 CTA 영역을 강조한 와이드 배너.',
+        
+        image:
+          'https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1800&h=840&q=80',
+        orientation: 'wide',
         colors: ['#EBD9C8', '#C98E63'],
         height: 640
       },
@@ -30,6 +34,10 @@ export const PROJECT_DATA = [
       {
         title: '스토리텔링 구간',
         desc: '브랜드 메시지와 감성 이미지를 활용한 인입 섹션.',
+        image:
+          'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1100&h=2200&q=80',
+        orientation: 'tall',
+
         colors: ['#F2E6DE', '#C18659'],
         height: 1180
       },

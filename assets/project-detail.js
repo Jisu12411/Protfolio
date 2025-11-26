@@ -20,6 +20,19 @@ function createMockImage(colors, height) {
   return el;
 }
 
+function createVisual(slide) {
+  if (slide.image) {
+    const img = document.createElement('img');
+    img.src = slide.image;
+    img.alt = slide.title;
+    img.loading = 'lazy';
+    img.className = 'mock-image real' + (slide.orientation === 'tall' ? ' tall' : '');
+    return img;
+  }
+
+  return createMockImage(slide.colors, slide.height);
+}
+
 function renderProject(project) {
   breadcrumbEl.textContent = project.label;
   titleEl.textContent = project.title;
@@ -49,7 +62,7 @@ function renderProject(project) {
 
     const visual = document.createElement('div');
     visual.className = 'slide-visual';
-    visual.appendChild(createMockImage(slide.colors, slide.height));
+    visual.appendChild(createVisual(slide));
 
     slideEl.append(info, visual);
     slidesWrapper.appendChild(slideEl);
