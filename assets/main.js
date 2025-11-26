@@ -5,36 +5,40 @@ function runTypingEffect() {
 
   const text = 'PROTFOLIO';
   let idx = 0;
-  let direction = 1;
   let typingTimer;
   let blinkTimer;
+  let deleting = false;
 
-  const tick = () => {
+  const type = () => {
     typedTarget.textContent = text.slice(0, idx);
-    idx += direction;
 
-    if (idx > text.length) {
-      direction = -1;
-      typingTimer = setTimeout(tick, 800);
-      return;
+    if (!deleting) {
+      idx += 1;
+      if (idx > text.length) {
+        deleting = true;
+        typingTimer = setTimeout(type, 900);
+        return;
+      }
+    } else {
+      idx -= 1;
+      if (idx < 0) {
+        deleting = false;
+        idx = 0;
+        typingTimer = setTimeout(type, 650);
+        return;
+      }
     }
 
-    if (idx < 0) {
-      direction = 1;
-      idx = 0;
-      typingTimer = setTimeout(tick, 680);
-      return;
-    }
-
-    typingTimer = setTimeout(tick, direction === 1 ? 140 : 90);
+    typingTimer = setTimeout(type, deleting ? 80 : 140);
   };
 
-  tick();
+  type();
 
   if (cursor) {
+    cursor.classList.remove('is-off');
     blinkTimer = setInterval(() => {
       cursor.classList.toggle('is-off');
-    }, 500);
+    }, 520);
   }
 
   return () => {
@@ -56,30 +60,32 @@ function initNav() {
     return;
   }
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          hideNav();
-        } else {
-          showNav();
-        }
-      },
-      { threshold: 0.2, rootMargin: '-8% 0px -30% 0px' }
-    );
-
-    observer.observe(hero);
-  }
-
-  const scrollHandler = () => {
-    if (window.scrollY > hero.clientHeight * 0.35) {
+  const setByScroll = () => {
+    if (window.scrollY > hero.clientHeight * 0.45) {
       showNav();
     } else {
       hideNav();
     }
   };
 
-  window.addEventListener('scroll', scrollHandler, { passive: true });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          showNav();
+        } else {
+          hideNav();
+        }
+      },
+      { threshold: 0.1, rootMargin: '-10% 0px -32% 0px' }
+    );
+
+    observer.observe(hero);
+  }
+
+  window.addEventListener('scroll', setByScroll, { passive: true });
+  window.addEventListener('resize', setByScroll);
+  setByScroll();
 }
 
 if (document.readyState === 'loading') {

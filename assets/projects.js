@@ -9,7 +9,6 @@ export const PROJECT_DATA = [
       {
         title: 'PC 버전',
         desc: '대형 비주얼과 CTA 영역을 강조한 와이드 배너.',
-        
         image:
           'https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1800&h=840&q=80',
         orientation: 'wide',
@@ -19,7 +18,10 @@ export const PROJECT_DATA = [
       {
         title: '모바일 버전',
         desc: '세로형 인터페이스에서 CTA 가독성을 높인 디자인.',
+        image:
+          'https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?auto=format&fit=crop&w=1200&h=2000&q=80',
         colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
         height: 920
       }
     ]
@@ -37,13 +39,15 @@ export const PROJECT_DATA = [
         image:
           'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1100&h=2200&q=80',
         orientation: 'tall',
-
         colors: ['#F2E6DE', '#C18659'],
         height: 1180
       },
       {
         title: 'USP & 혜택 구간',
         desc: '핵심 USP를 3단 모듈로 정리하고 혜택을 강조.',
+        image:
+          'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1500&h=1000&q=80',
+        orientation: 'wide',
         colors: ['#EFE2D7', '#B87443'],
         height: 1280
       }
@@ -59,12 +63,18 @@ export const PROJECT_DATA = [
       {
         title: '히어로 & 가치 제안',
         desc: '단일 CTA와 핵심 메시지를 강조한 첫 화면.',
+        image:
+          'https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1700&h=900&q=80',
+        orientation: 'wide',
         colors: ['#F4E9E1', '#B87B4C'],
         height: 1080
       },
       {
         title: '전환 보조 섹션',
         desc: '세부 기능, 후기, FAQ를 연결한 전환 구간.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&h=2100&q=80',
+        orientation: 'tall',
         colors: ['#EFE3D8', '#A86A3F'],
         height: 1260
       }
@@ -80,18 +90,24 @@ export const PROJECT_DATA = [
       {
         title: '콘셉트 카드',
         desc: '시선 확보용 비주얼과 키메시지 카드.',
+        image:
+          'https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=1300&h=900&q=80',
         colors: ['#F5EAE1', '#A56B42'],
         height: 760
       },
       {
         title: '정보 카드',
         desc: '데이터/인사이트를 간결하게 정리한 카드.',
+        image:
+          'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1300&h=900&q=80',
         colors: ['#F0E2D6', '#C58A5E'],
         height: 820
       },
       {
         title: '콜투액션 카드',
         desc: '마무리 CTA와 해시태그를 배치한 카드.',
+        image:
+          'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1300&h=900&q=80',
         colors: ['#F3E5DA', '#B07145'],
         height: 760
       }
