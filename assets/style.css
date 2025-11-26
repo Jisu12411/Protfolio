@@ -157,7 +157,6 @@ section {
 .hero__cursor.is-off {
   opacity: 0;
 }
-
 .hero__desc {
   max-width: 520px;
   color: var(--muted);
@@ -569,7 +568,6 @@ section {
   height: auto;
   object-fit: contain;
 }
-
 .slider__control {
   position: absolute;
   top: 50%;
@@ -627,12 +625,10 @@ section {
   .about {
     grid-template-columns: 1fr;
   }
-
   .gallery-thumb {
     height: 224px;
   }
 }
-
 @media (max-width: 768px) {
   .hero {
     padding: 0 20px;
