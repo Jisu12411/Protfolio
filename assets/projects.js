@@ -1,116 +1,261 @@
-export const PROJECT_DATA = [
+const PROJECT_DATA = [
   {
     slug: 'main-banner',
     label: 'Project · Main Banner',
     title: '메인 배너',
-    description: '브랜드 톤앤매너에 맞춰 PC와 모바일을 별도 설계하고, CTA 가독성과 감성적인 비주얼을 함께 강조했습니다.',
-    notes: ['주요 USP를 상단 1스크린 내에서 노출', 'PC/모바일 해상도별 버튼 대비 확보', '슬로건과 보조 카피를 분리해 단계적 주목 유도'],
+    description:
+      '첫 시선에서 브랜드의 핵심 메시지를 전달하며,<br>감각적인 비주얼과 명확한 카피로 인상을 설계했습니다.',
+    links: {
+      detail: 'project.html?slug=detail-page',
+      landing: 'project.html?slug=landing-page',
+      cardnews: 'project.html?slug=card-news',
+    },
     slides: [
       {
-        title: 'PC 버전',
-        desc: '대형 비주얼과 CTA 영역을 강조한 와이드 배너.',
-        image:
-          'https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1800&h=840&q=80',
+        title: 'PC 버전01',
+        image: 'image/mainbannerPc01.jpg',
         orientation: 'wide',
         colors: ['#EBD9C8', '#C98E63'],
-        height: 640
+        width: '100%',
       },
       {
-        title: '모바일 버전',
-        desc: '세로형 인터페이스에서 CTA 가독성을 높인 디자인.',
-        image:
-          'https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?auto=format&fit=crop&w=1200&h=2000&q=80',
+        title: 'PC 버전02',
+        image: 'image/mainbannerPc02.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전03',
+        image: 'image/mainbannerPc03.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전04',
+        image: 'image/mainbannerPc04.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전05',
+        image: 'image/mainbannerPc05.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전06',
+        image: 'image/mainbannerPc06.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전07',
+        image: 'image/mainbannerPc07.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: 'PC 버전08',
+        image: 'image/mainbannerPc08.jpg',
+        orientation: 'wide',
+        colors: ['#EBD9C8', '#C98E63'],
+        width: '100%',
+      },
+      {
+        title: '모바일 버전01',
+        image: 'image/mainbanner01.jpg',
         colors: ['#F3E6DC', '#B57A4E'],
         orientation: 'tall',
-        height: 920
-      }
-    ]
+        width: '40%',
+      },
+      {
+        title: '모바일 버전02',
+        image: 'image/mainbanner02.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전03',
+        image: 'image/mainbanner03.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전04',
+        image: 'image/mainbanner04.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전05',
+        image: 'image/mainbanner05.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전06',
+        image: 'image/mainbanner06.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전07',
+        image: 'image/mainbanner07.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '모바일 버전08',
+        image: 'image/mainbanner08.jpg',
+        colors: ['#F3E6DC', '#B57A4E'],
+        orientation: 'tall',
+        width: '40%',
+      },
+    ],
   },
   {
     slug: 'detail-page',
     label: 'Project · Detail Page',
     title: '상세페이지',
-    description: '상품 USP와 스토리를 강조하는 롱폼 레이아웃으로, 구매 전환을 고려한 정보 배치를 설계했습니다.',
-    notes: ['섹션별 명확한 헤드라인과 USP 배치', '실사용 컷과 후기형 모듈을 교차 배치', '고려 요소: 신뢰도, 비교, 혜택 강조'],
+    description:
+      '제품의 강점을 구조적으로 정리하여 설득력을 높였으며,,<br>시각적 흐름과 정보 전달의 균형을 고려해 구성했습니다.',
+    links: {
+      mainbanner: 'project.html?slug=main-banner',
+      landing: 'project.html?slug=landing-page',
+      cardnews: 'project.html?slug=card-news',
+    },
     slides: [
       {
-        title: '스토리텔링 구간',
-        desc: '브랜드 메시지와 감성 이미지를 활용한 인입 섹션.',
-        image:
-          'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1100&h=2200&q=80',
+        title: '주리에떼 상세페이지',
+        image: 'image/detailPage01.jpg',
         orientation: 'tall',
         colors: ['#F2E6DE', '#C18659'],
-        height: 1180
+        width: '40%',
       },
       {
-        title: 'USP & 혜택 구간',
-        desc: '핵심 USP를 3단 모듈로 정리하고 혜택을 강조.',
-        image:
-          'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1500&h=1000&q=80',
-        orientation: 'wide',
+        title: '루이델라 상세페이지',
+        image: 'image/detailPage02.jpg',
+        orientation: 'tall',
         colors: ['#EFE2D7', '#B87443'],
-        height: 1280
-      }
-    ]
+        width: '40%',
+      },
+    ],
   },
   {
     slug: 'landing-page',
     label: 'Project · Landing Page',
-    title: '렌딩페이지',
-    description: '서비스 가치 제안과 CTA에 집중한 전환형 페이지로, 퍼널 진입에 맞춰 마이크로 카피를 구성했습니다.',
-    notes: ['상단 즉시 CTA + 보조 CTA 배치', 'FAQ/보증/신뢰 모듈을 하단에 배치해 이탈 방지', '모바일 우선의 컴포넌트 리듬 설계'],
+    title: '랜딩페이지',
+    description:
+      '사용자가 망설이지 않도록 가치·혜택·CTA를 명확하게 배치하였으며,<br>전환율을 높이기 위한 정보 구조와 시각적 설계를 중점에 두었습니다.',
+    links: {
+      mainbanner: 'project.html?slug=main-banner',
+      detail: 'project.html?slug=detail-page',
+      cardnews: 'project.html?slug=card-news',
+    },
     slides: [
       {
-        title: '히어로 & 가치 제안',
-        desc: '단일 CTA와 핵심 메시지를 강조한 첫 화면.',
-        image:
-          'https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1700&h=900&q=80',
-        orientation: 'wide',
+        title: '매일창업 랜딩페이지',
+        image: 'image/landingPage01.jpg',
+        orientation: 'tall',
         colors: ['#F4E9E1', '#B87B4C'],
-        height: 1080
+        width: '40%',
       },
       {
-        title: '전환 보조 섹션',
-        desc: '세부 기능, 후기, FAQ를 연결한 전환 구간.',
-        image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&h=2100&q=80',
+        title: '두드림 한강 페스티벌 랜딩페이지',
+        image: 'image/landingPage02.jpg',
         orientation: 'tall',
         colors: ['#EFE3D8', '#A86A3F'],
-        height: 1260
-      }
-    ]
+        width: '40%',
+      },
+    ],
   },
   {
     slug: 'card-news',
     label: 'Project · Card News',
     title: '카드뉴스',
-    description: 'SNS 채널용 카드 시리즈로, 브랜드 컬러와 리듬을 살려 핵심 메시지를 빠르게 전달합니다.',
-    notes: ['3~8장으로 구성된 템플릿', '문장 길이 대비 여백 확보', '플랫폼 가이드에 맞춘 안전영역 반영'],
+    description:
+      '핵심 내용을 시각적으로 압축해 전달력을 높였으며,<br>중요도에 따라 정보의 우선순위를 재배치해 이해도를 향상시켰습니다.',
+    links: {
+      mainbanner: 'project.html?slug=main-banner',
+      detail: 'project.html?slug=detail-page',
+      landing: 'project.html?slug=landing-page',
+    },
     slides: [
       {
-        title: '콘셉트 카드',
-        desc: '시선 확보용 비주얼과 키메시지 카드.',
-        image:
-          'https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=1300&h=900&q=80',
+        title: '언더스탠딩 카페01',
+        image: 'image/cardnews01.jpg',
         colors: ['#F5EAE1', '#A56B42'],
-        height: 760
+        orientation: 'tall',
+        width: '40%',
       },
       {
-        title: '정보 카드',
-        desc: '데이터/인사이트를 간결하게 정리한 카드.',
-        image:
-          'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1300&h=900&q=80',
+        title: '언더스탠딩 카페02',
+        image: 'image/cardnews02.jpg',
         colors: ['#F0E2D6', '#C58A5E'],
-        height: 820
+        orientation: 'tall',
+        width: '40%',
       },
       {
-        title: '콜투액션 카드',
-        desc: '마무리 CTA와 해시태그를 배치한 카드.',
-        image:
-          'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1300&h=900&q=80',
+        title: '언더스탠딩 카페03',
+        image: 'image/cardnews03.jpg',
         colors: ['#F3E5DA', '#B07145'],
-        height: 760
-      }
-    ]
-  }
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '언더스탠딩 카페04',
+        image: 'image/cardnews04.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '언더스탠딩 카페05',
+        image: 'image/cardnews05.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '주리에뗴 이벤트01',
+        image: 'image/cardnews06.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '주리에뗴 이벤트02',
+        image: 'image/cardnews07.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '주리에뗴 이벤트03',
+        image: 'image/cardnews08.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+      {
+        title: '주리에뗴 이벤트04',
+        image: 'image/cardnews09.jpg',
+        colors: ['#F3E5DA', '#B07145'],
+        orientation: 'tall',
+        width: '40%',
+      },
+    ],
+  },
 ];
