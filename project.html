@@ -17,9 +17,12 @@
   </nav>
 
   <header class="page-hero">
-    <div class="breadcrumb" data-breadcrumb>Project</div>
-    <h1 class="page-title" data-title>프로젝트</h1>
-    <p class="page-desc" data-desc>선택한 프로젝트에 대한 상세 설명이 이곳에 표시됩니다.</p>
+    <div class="page-hero-left">
+      <div class="breadcrumb" data-breadcrumb></div>
+      <h1 class="page-title" data-title></h1>
+    </div>
+
+    <p class="page-hero-right page-desc" data-desc></p>
   </header>
 
   <main class="page">
@@ -34,7 +37,7 @@
   <footer class="footer">
     <div>
       <div class="footer__brand">Jisu Park Portfolio</div>
-      <p class="footer__desc">선택한 프로젝트의 결과물을 브라운 톤 무드로 소개합니다.</p>
+      <p class="footer__desc">브랜드가 전하고 싶은 가치와 사용자가 알고 싶은 정보를<br>하나의 흐름으로 연결하는 웹디자이너 박지수입니다.</p>
     </div>
     <div>
       <div class="footer__title">Contact</div>
@@ -52,7 +55,13 @@
     </div>
   </footer>
 
-  <script type="module" src="assets/main.js"></script>
-  <script type="module" src="assets/project-detail.js"></script>
+<!-- 메인 스크립트 -->
+<script src="assets/main.js"></script>
+
+<!-- 프로젝트 데이터 먼저 로드 -->
+<script src="assets/projects.js"></script>
+
+<!-- 상세 페이지 로직 -->
+<script src="assets/project-detail.js"></script>
 </body>
 </html>
